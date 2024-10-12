@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\william\pythonProojects\pruebas_umsl\prueba_con_menu_uno\env
+set VIRTUAL_ENV=C:\william\pythonProjects\pruebas_umsl\prueba_con_menu_uno\env
 
 if not defined PROMPT set PROMPT=$P$G
 
