@@ -62,6 +62,6 @@ tk.Label(login_window, text="Clave").pack(pady=5)
 entry_clave = tk.Entry(login_window, show="*")
 entry_clave.pack(pady=5)
 
-tk.Button(login_window, text="Login", command=validar_login).pack(pady=20)
+tk.Button(login_window, text="Entrar", command=validar_login).pack(pady=20)
 
 login_window.mainloop()
