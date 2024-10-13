@@ -1,3 +1,4 @@
+import socket
 import tkinter as tk
 from datetime import datetime
 
@@ -14,18 +15,23 @@ def menu_principal():
     menu_window = tk.Tk()
     menu_window.title("Menu Principal")
 
-    # Encabezado con logo y texto
-    logo = tk.PhotoImage(file="img/logo_empresa.png")  # Asegúrate de ajustar la ruta del logo
+     # Encabezado con logo y texto
+    
+    titulo="CONTROL DE DEVOLUCIONES"
+    ruta_logo="img/logo_empresa.png"
+    nombre_maquina=socket.gethostname()
+    if nombre_maquina=='WilliamJose':
+        titulo="UNIDAD MEDICA SAN LUIS"
+        ruta_logo="img/logo_umsl.png"
+
+    # Enruta_logo="img/logo_empresa.png"cabezado con logo y texto
+    logo = tk.PhotoImage(file=ruta_logo)  # Asegúrate de ajustar la ruta del logo
     encabezado = tk.Frame(menu_window)
     encabezado.pack(side=tk.TOP, fill=tk.X)
-
-     # Encabezado con logo y texto
-    titulo="UNIDAD MEDICA SAN LUIS"
-    titulo="CONTROL DE DEVOLUCIONES"
     
     tk.Label(encabezado, image=logo).pack(side=tk.LEFT)
     #tk.Label(menu_window, text=titulo, font=("Arial", 24)).grid(row=0, column=1)
-    tk.Label(encabezado, text=titulo, font=("Arial", 24)).pack(side=tk.LEFT, expand=True)
+    tk.Label(encabezado, text=titulo, font=("Arial", 18)).pack(side=tk.LEFT, expand=True)
     
     global label_fecha_hora
     label_fecha_hora = tk.Label(encabezado, text="", font=("Arial", 12))
